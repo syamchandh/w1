@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+ 
+<html>
+ 
+<head>
+ 
+<title>employee</title>
+ 
+
+<style>
+    body{
+        background:rgb(230, 123, 123);
+        
+    }
+th{
+ 
+  padding:center;
+  background:rgb(0, 0, 0);
+  color: white;
+  
+}
+td {
+    border:1px solid;
+    background:white
+    
+  }
+
+  
+  table {
+    width: 100%;
+  }
+  </style>
+ 
+</head>
+ 
+<body>
+ 
+<div class="container"><br><br><br><br><br><br><br><br>
+ 
+<table>
+  <thead>
+  <tr >
+ 
+      <th>EMP ID</th>
+ 
+      <th>EMP NAME</th>
+ 
+      <th>QUALIFICATION</th>
+ 
+      <th>DOB</th>
+ 
+      <th>DESIGNATION</th>
+
+      <th> ADDRESS </th>
+      <th> PHONE </th>
+      <th> EMAIL </th>
+      <th>ACTION</th>
+ 
+  </tr> </thead>
+
+<tbody>
+ {% for i in products %}
+
+  <tr>
+ 
+      <td> {{i.id}}</td>
+ 
+      <td>{{i.employee_name}}</td>
+ 
+      <td>{{i.qualification}}</td>
+ 
+      <td>{{i.dob}}</td>
+ 
+      <td>{{i.designation}}</td>
+      <td>{{i.address}}</td>
+      <td>{{i.mobile}}</td>
+      <td>{{i.emaill}}</td>
+      <td><a href="{% url 'editpage' i.id %}">EDIT</a><br>
+        <a href="{% url 'deletepage' i.id %}">DELETE</a></td>
+ 
+  </tr>
+</tbody>
+{% endfor %}
+</table>
+ 
+</div>
+ 
+ 
+ 
+ 
+</body>
+ 

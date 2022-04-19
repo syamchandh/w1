@@ -1,0 +1,76 @@
+
+<html>
+    <title>Sign Up</title>
+    <head>
+        <style>
+            body{
+                background: 100%;
+                background-color: grey;
+                
+            }
+            div.a{
+              margin: auto;
+              width: 500px;
+              
+              padding-left: 1%;
+              padding-bottom: 1%;
+              padding-top: .50%;
+              font-family: sans-serif;
+              color: rgb(255, 255, 255);
+              background: transparent;
+              border-radius: 4px;
+              box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+            }
+            #tb{
+                height: 30px;
+                width : 475px;
+                background: white;
+                border-style: box;
+                outline: none;
+                
+                
+            }
+            #tbz{
+                height: 75px;
+                width : 475px;
+                background: white;
+                border-style: box;
+                outline: none;
+                
+            }
+            #tb1{
+                height: 100px;
+                width: 475px;
+            }
+            #tb2{
+                height: 30px;
+                width: 200px;
+                border-style: box;
+            }
+            div.k{
+                padding-top: 1%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <div class="k"><br><br></div>
+        <div class="a"><h1 align="center">EDIT EMPLOYEE</h1>
+            
+         <form method="POST" action="/edit_pro_details/{{products.pk}}">  
+            {% csrf_token %}
+            <input type="text" id="tb" name="employee_name" value="{{ products.employee_name}}"><br><br>
+            <input type="text" id="tbz" name="qualification" value="{{ products.qualification }}" rows="3"><br><br>
+            <input type="date" id="tb" name="dob" value="{{ products.dob }}"><br><br>
+            <input type="text" id="tb" name="designation" value="{{ products.designation }}"><br><br>
+            <input type="text" id="tb" name="address" value="{{ products.address }}"><br><br>
+            <input type="number" id="tb" name="mobile" value="{{ products.mobile }}"><br><br>
+            <input type="text" id="tb" name="emaill" value="{{ products.emaill }}"><br><br>
+            
+            <br>
+            <button type="submit" id="submit" style="height: 40px; width: 475; background-color: rgb(255, 0, 0);color: rgb(255, 255, 255);border: transparent;">UPDATE DETAILS</button> 
+            <br></form>  </center><br>
+        </div>
+        </div>
+    </body> 
+</html>

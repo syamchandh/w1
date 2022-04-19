@@ -1,0 +1,83 @@
+
+<html>
+    <title>Sign Up</title>
+    <head>
+        <style>
+            body{
+                background: 100%;
+                background-color: rgb(39, 221, 136);
+                
+            }
+            div.a{
+              margin: auto;
+              width: 500px;
+              
+              padding-left: 1%;
+              padding-bottom: 1%;
+              padding-top: .50%;
+              font-family: sans-serif;
+              color: rgb(255, 255, 255);
+              text-shadow: 0 2px 25px rgba(2, 0, 0, 0.4);
+              background: transparent;
+              border-radius: 4px;
+              box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+            }
+            #tb{
+                height: 30px;
+                width : 475px;
+                background: white;
+                border-style: box;
+                outline: none;
+                
+                
+            }
+            #tbz{
+                height: 75px;
+                width : 475px;
+                background: white;
+                border-style: box;
+                outline: none;
+                
+            }
+            #tb1{
+                height: 100px;
+                width: 475px;
+            }
+            #tb2{
+                height: 30px;
+                width: 200px;
+                border-style: box;
+            }
+            div.k{
+                padding-top: 1%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <div class="k"><br><br></div>
+        <div class="a"><h1 align="center"> ADD EMPLOYEE </h1>
+            
+         <form method="POST" action="{% url 'adding_emp' %}">  
+            {% csrf_token %}
+            <input type="text" id="tb" name="employee_name" placeholder="Employee name"><br><br>
+            <input type="text" id="tbz" name="qualification" placeholder="qualification"><br><br>
+            <input type="date" id="tb" name="dob" placeholder="DOB"><br><br>
+            <input type="text" id="tb" name="designation" placeholder="designation"><br><br>
+            <input type="text" id="tb" name="address" placeholder="address" rows="3"><br><br>
+            <input type="number" id="tb" name="mobile" placeholder="Mobile"><br><br>
+            <input type="text" id="tb" name="emaill" placeholder="Email"><br><br>
+            
+            <div class="form-group">
+                <label>Gender :</label>
+                <input type="radio" name="Gend" value="Male">Male
+                <input type="radio" name="Gend" value="Female">Female<br><br>
+            </div>
+            
+            <br>
+            <button type="submit" id="submit" style="height: 40px; width: 475; background-color: rgb(255, 0, 0);color: rgb(255, 255, 255);border: transparent;">Submit</button> 
+            <br></form>  </center><br>
+        </div>
+        </div>
+    </body> 
+</html>

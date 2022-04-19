@@ -1,0 +1,12 @@
+<h1> Are you sure you want to delete employee <b>'{{ products.employee_name }}'</b></h1>
+<!---<button onclick="delete_product">yes</button> &nbsp; <button onclick="show_pro" name="">No</button> !--->
+<form method="POST" action="/delete_product/{{products.pk}}"> 
+    {% csrf_token %}
+<button>YES</button>
+
+</form>
+<form method="POST" action="/show_emp">
+{% csrf_token %}
+    <button>NO</button>
+</form>
+
